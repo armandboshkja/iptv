@@ -1,6 +1,5 @@
 const fetch = require('node-fetch');
 const fs = require('fs');
-const contentDisposition = require('content-disposition');
 
 const express = require('express')
 const cors = require('cors');
@@ -39,7 +38,7 @@ app.get('/update' , async (req,res) => {
 app.get('/iptv' , async (req,res) => {
   res.writeHead(200, {
           'Content-Type': 'audio/mpegurl',
-          'Content-disposition': contentDisposition('list.m3u')});
+          'Content-Disposition': 'attachment; filename="list.m3u"'});
   
   const fileStream = fs.createReadStream('list.m3u');
   
