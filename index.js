@@ -33,7 +33,7 @@ app.get('/update' , async (req,res) => {
 
             }
         });
-}
+})
         
         
 app.get('/iptv' , async (req,res) => {
