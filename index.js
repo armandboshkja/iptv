@@ -1,6 +1,6 @@
 const fetch = require('node-fetch');
 const fs = require('fs');
-setInterval(mainFunction(), 1680000);
+setInterval(mainFunction, 1680000);
 
 function mainFunction(){
     var time = new Date();
