@@ -38,7 +38,8 @@ app.get('/update' , async (req,res) => {
         
 app.get('/iptv' , async (req,res) => {
   res.writeHead(200, {
-          'Content-disposition': attachment, filename="list.m3u"});
+          'Content-Type': 'audio/mpegurl',
+          'Content-disposition': contentDisposition('list.m3u')});
   
   const fileStream = fs.createReadStream('list.m3u');
   
